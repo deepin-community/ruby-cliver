@@ -1,0 +1,23 @@
+ruby-cliver (0.3.2-3) unstable; urgency=medium
+
+  * Team upload.
+  * Fix Testsuite: value for ruby packages
+  * Drop test-ignore on ruby2.2
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Tue, 01 Mar 2016 20:53:01 +0100
+
+ruby-cliver (0.3.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix tests for new rspec version 3.3.0.
+  * debian/control: Fix both vcs-git and vcs-browser links, silence lintian.
+  * debian/control: Update standards-version to 3.9.7, silence lintian.
+  * debian/patches: Add DEP-3 headers to both patches.
+
+ -- Lucas Albuquerque Medeiros de Moura <lucas.moura128@gmail.com>  Tue, 01 Mar 2016 13:54:06 -0300
+
+ruby-cliver (0.3.2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #797136)
+
+ -- Andrew Lee (李健秋) <andrew.lee@collabora.co.uk>  Fri, 28 Aug 2015 12:09:11 +0800

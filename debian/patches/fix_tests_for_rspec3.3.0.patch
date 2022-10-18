@@ -1,0 +1,54 @@
+Description: Fix tests for rspec 3.3.0
+ For newer rspec versions, the methods be_false and be_true don't exist
+ anymore. Their behaviour was replaced by be_falsey and be_truthy,
+ respectivelly. Therefore, to fix the build, the test was updated with
+ these new methods signatures.
+
+ This fix can be found on the upstream project, however a new release
+ was not made yet with the fix described above.
+
+Author: Lucas Albuquerque Medeiros de Moura <lucas.moura128@gmail.com>
+Last-updated: 2016-03-01
+Forwarded: not-needed 
+Bug: not-needed
+
+Index: ruby-cliver/spec/cliver_spec.rb
+===================================================================
+--- ruby-cliver.orig/spec/cliver_spec.rb	2016-03-01 13:49:50.498689244 -0300
++++ ruby-cliver/spec/cliver_spec.rb	2016-03-01 13:51:24.978428202 -0300
+@@ -62,7 +62,7 @@
+ 
+     context '::dependency_unmet?' do
+       let(:method) { :dependency_unmet? }
+-      it { should be_false }
++      it { should be_falsey }
+     end
+     context '::detect' do
+       let(:method) { :detect }
+@@ -191,7 +191,7 @@
+     end
+     context '::dependency_unmet?' do
+       let(:method) { :dependency_unmet? }
+-      it { should be_true }
++      it { should be_truthy }
+     end
+     context '::detect' do
+       let(:method) { :detect }
+@@ -219,7 +219,7 @@
+       end
+       context '::dependency_unmet?' do
+         let(:method) { :dependency_unmet? }
+-        it { should be_true }
++        it { should be_truthy }
+       end
+       context '::detect' do
+         let(:method) { :detect }
+@@ -246,7 +246,7 @@
+     end
+     context '::dependency_unmet?' do
+       let(:method) { :dependency_unmet? }
+-      it { should be_true }
++      it { should be_truthy }
+     end
+     context '::detect' do
+       let(:method) { :detect }
